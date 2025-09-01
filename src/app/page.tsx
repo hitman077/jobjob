@@ -1,5 +1,6 @@
 import BannerSection from "@/components/banner-section";
 import JobSection from "@/components/job/job-section";
+import JobSection2 from "@/components/job/job-section2";
 import Pricing from "@/components/pricing";
 import Image from "next/image";
 
@@ -8,6 +9,7 @@ export default function Home() {
     <>
       <BannerSection />
 			<JobSection />
+			<JobSection2 />
 		</>
   )
 }

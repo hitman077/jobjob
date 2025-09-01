@@ -9,8 +9,8 @@ import Link from 'next/link'
 export default function JobSection() {
   return (
 		<section className="py-10">
-			<div className="mx-auto max-w-5xl px-6">
-				<div className="mx-auto max-w-5xl space-y-6">
+			<div className="mx-auto max-w-6xl px-6">
+				<div className="mx-auto max-w-6xl space-y-6">
 					<h1 className="text-xl font-semibold lg:text-2xl">
 						TOP COMPANIES
 					</h1>

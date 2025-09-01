@@ -16,8 +16,8 @@ import "swiper/css/effect-coverflow"
 export default function BannerSection() {
 	return (
 		<section className="py-10">
-			<div className="mx-auto max-w-5xl px-6">
-				<div className="x-auto relative max-w-5xl">
+			<div className="mx-auto max-w-6xl px-6">
+				<div className="x-auto relative max-w-6xl">
 					<Swiper
 						slidesPerView={1}
 						pagination={{ clickable: true }}
@@ -34,7 +34,7 @@ export default function BannerSection() {
 						]}
 					>
 						<SwiperSlide className="px-2">
-							<div className="bg-amber-500 rounded-(--radius) h-70 max-w-5xl border p-9">
+							<div className="bg-amber-500 rounded-(--radius) h-70 max-w-6xl border p-9">
 								<div className="mx-auto h-fit w-full">
 									{/* <NetlifyLogo /> */}
 								</div>
@@ -44,7 +44,7 @@ export default function BannerSection() {
 							</div>
 						</SwiperSlide>
 						<SwiperSlide className="px-2">
-							<div className="bg-background rounded-(--radius) h-70 max-w-5xl border p-9">
+							<div className="bg-background rounded-(--radius) h-70 max-w-6xl border p-9">
 								<div className="mx-auto h-fit w-full">
 									{/* <AstroLogo /> */}
 								</div>
@@ -54,7 +54,7 @@ export default function BannerSection() {
 							</div>
 						</SwiperSlide>
 						<SwiperSlide className="px-2">
-							<div className="bg-background rounded-(--radius) h-70 max-w-5xl border p-9">
+							<div className="bg-background rounded-(--radius) h-70 max-w-6xl border p-9">
 								<div className="mx-auto h-fit w-full">
 									{/* <WorkOsLogo /> */}
 								</div>
