@@ -3,6 +3,7 @@ import FooterSection from "@/components/footer";
 import JobSection from "@/components/job/job-section";
 import JobSection2 from "@/components/job/job-section2";
 import JobSection3 from "@/components/job/job-section3";
+import JobSection4 from "@/components/job/job-section4";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
 			<JobSection />
 			<JobSection2 />
       <JobSection3 />
+      <JobSection4 />
       <FooterSection/>
 		</>
   )

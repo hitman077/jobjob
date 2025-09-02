@@ -2,8 +2,9 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { Logo } from "./logo";
+import { useTheme } from "next-themes";
 
 const menuItems = [
     { name: 'Features', href: '#' },
@@ -13,7 +14,14 @@ const menuItems = [
 ]
 
 export default function HeaderSection() {
-    const [menuState, setMenuState] = React.useState(false)
+	const [menuState, setMenuState] = React.useState(false)
+	const { theme, setTheme } = useTheme()
+
+	const toggleTheme = () => {
+		// ถ้าธีมปัจจุบันเป็น "light" ให้เปลี่ยนเป็น "dark"
+		// ถ้าไม่ใช่ (เป็น "dark" หรือ "system") ให้เปลี่ยนเป็น "light"
+		setTheme(theme === "light" ? "dark" : "light")
+	}
   return (
 		<header>
 			<nav
@@ -71,6 +79,17 @@ export default function HeaderSection() {
 									<Link href="#">
 										<span>Sign Up</span>
 									</Link>
+								</Button>
+								<Button
+									variant="ghost"
+									size="icon"
+									onClick={toggleTheme}
+								>
+									<Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+									<Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+									<span className="sr-only">
+										Toggle theme
+									</span>
 								</Button>
 							</div>
 						</div>

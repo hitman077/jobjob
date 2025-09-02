@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Prompt } from "next/font/google"
 import "./globals.css"
 import HeaderSection from "@/components/header-section"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const prompt = Prompt({
 	subsets: ["latin"],
@@ -20,10 +21,17 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<body className={prompt.className}>
-				<HeaderSection />
-				<main>{children}</main>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					<HeaderSection />
+					<main>{children}</main>
+				</ThemeProvider>
 			</body>
 		</html>
 	)

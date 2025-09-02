@@ -19,12 +19,12 @@ export default function BannerSection() {
 			<div className="mx-auto max-w-6xl px-6">
 				<div className="x-auto relative max-w-6xl">
 					<Swiper
+						className="mySwiper"
 						slidesPerView={1}
-						pagination={{ clickable: true }}
+						pagination={{ dynamicBullets: true }}
 						loop
 						autoplay={{ delay: 5000 }}
-                        navigation={false}
-                        
+						navigation={false}
 						// effect="coverflow"
 						modules={[
 							Autoplay,
@@ -33,8 +33,8 @@ export default function BannerSection() {
 							Pagination,
 						]}
 					>
-						<SwiperSlide className="px-2">
-							<div className="bg-amber-500 rounded-(--radius) h-70 max-w-6xl border p-9">
+						<SwiperSlide className="">
+							<div className="bg-amber-500 rounded-(--radius) h-80 max-w-6xl border p-9">
 								<div className="mx-auto h-fit w-full">
 									{/* <NetlifyLogo /> */}
 								</div>
@@ -43,8 +43,8 @@ export default function BannerSection() {
 								</p>
 							</div>
 						</SwiperSlide>
-						<SwiperSlide className="px-2">
-							<div className="bg-background rounded-(--radius) h-70 max-w-6xl border p-9">
+						<SwiperSlide className="">
+							<div className="bg-background rounded-(--radius) h-80 max-w-6xl border p-9">
 								<div className="mx-auto h-fit w-full">
 									{/* <AstroLogo /> */}
 								</div>
@@ -53,8 +53,8 @@ export default function BannerSection() {
 								</p>
 							</div>
 						</SwiperSlide>
-						<SwiperSlide className="px-2">
-							<div className="bg-background rounded-(--radius) h-70 max-w-6xl border p-9">
+						<SwiperSlide className="">
+							<div className="bg-background rounded-(--radius) h-80 max-w-6xl border p-9">
 								<div className="mx-auto h-fit w-full">
 									{/* <WorkOsLogo /> */}
 								</div>
