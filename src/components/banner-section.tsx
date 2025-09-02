@@ -1,5 +1,5 @@
 "use client"
-import React from "react"
+
 import { Swiper, SwiperSlide } from "swiper/react"
 import {
 	Autoplay,
@@ -12,6 +12,7 @@ import "swiper/css/autoplay"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/effect-coverflow"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function BannerSection() {
 	return (
@@ -19,12 +20,17 @@ export default function BannerSection() {
 			<div className="mx-auto max-w-6xl px-6">
 				<div className="x-auto relative max-w-6xl">
 					<Swiper
-						className="mySwiper"
+						className="swiper relative rounded-lg overflow-hidden shadow-lg group"
+						spaceBetween={0}
 						slidesPerView={1}
 						pagination={{ dynamicBullets: true }}
+						// navigation={true}
+						navigation={{
+							prevEl: ".swiper-button-prev",
+							nextEl: ".swiper-button-next",
+						}}
 						loop
 						autoplay={{ delay: 5000 }}
-						navigation={false}
 						// effect="coverflow"
 						modules={[
 							Autoplay,
@@ -44,7 +50,7 @@ export default function BannerSection() {
 							</div>
 						</SwiperSlide>
 						<SwiperSlide className="">
-							<div className="bg-background rounded-(--radius) h-80 max-w-6xl border p-9">
+							<div className="bg-pink-500 rounded-(--radius) h-80 max-w-6xl border p-9">
 								<div className="mx-auto h-fit w-full">
 									{/* <AstroLogo /> */}
 								</div>
@@ -54,7 +60,7 @@ export default function BannerSection() {
 							</div>
 						</SwiperSlide>
 						<SwiperSlide className="">
-							<div className="bg-background rounded-(--radius) h-80 max-w-6xl border p-9">
+							<div className="bg-emerald-500 rounded-(--radius) h-80 max-w-6xl border p-9">
 								<div className="mx-auto h-fit w-full">
 									{/* <WorkOsLogo /> */}
 								</div>
@@ -63,6 +69,12 @@ export default function BannerSection() {
 								</p>
 							</div>
 						</SwiperSlide>
+						<div className="swiper-button-prev absolute top-1/2 -left-2 z-10 -translate-y-1/2 w-10 h-15 flex items-center justify-center rounded-r-md bg-black/40 text-white cursor-pointer opacity-0 group-hover:opacity-100 duration-300 hover:bg-black/70">
+							<ChevronLeft className="size-7" />
+						</div>
+						<div className="swiper-button-next absolute top-1/2 -right-2 z-10 -translate-y-1/2 w-10 h-15 flex items-center justify-center rounded-l-md bg-black/40 text-white cursor-pointer opacity-0 group-hover:opacity-100 duration-300 hover:bg-black/70">
+							<ChevronRight className="size-7" />
+						</div>
 					</Swiper>
 				</div>
 			</div>
