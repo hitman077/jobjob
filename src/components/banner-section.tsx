@@ -17,15 +17,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const banner = [
 	{
 		id: 1,
-		imgUrl: "/images/1.webp",
+		imgUrl: "https://placehold.co/990x334/9C2007/FFFFFF.png",
 	},
 	{
 		id: 2,
-		imgUrl: "/images/2.webp",
+		imgUrl: "https://placehold.co/990x334/259C07/FFFFFF.png",
 	},
 	{
 		id: 3,
-		imgUrl: "/images/3.webp",
+		imgUrl: "https://placehold.co/990x334/0933C8/FFFFFF.png",
 	},
 	// {
 	// 	id: 4,
@@ -34,7 +34,7 @@ const banner = [
 ]
 export default function BannerSection() {
 	return (
-		<section className="py-10">
+		<section className="pt-16 md:pt-10">
 			<div className="mx-auto max-w-6xl px-6">
 				<div className="x-auto relative max-w-6xl">
 					<Swiper
