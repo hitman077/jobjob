@@ -179,17 +179,18 @@ export default function JobSection2() {
 						// 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						// 	</CardContent>
 						// </Card>
-						<Card key={index} className="pt-0 flex flex-col h-full">
-							<CardHeader className="p-0">
-								<Image
-									src={blog.coverImage}
-									alt=""
-									width={300}
-									height={150}
-									className="w-full h-[250px] object-cover rounded-t-lg"
-								/>
-							</CardHeader>
-							<CardContent className="flex flex-col flex-grow px-6 py-4">
+						<Card
+							key={index}
+							className="flex flex-col h-full pt-0 pb-0 gap-2"
+						>
+							<Image
+								src={blog.coverImage}
+								alt=""
+								width={300}
+								height={256}
+								className="w-full h-[256px] object-cover rounded-t-lg"
+							/>
+							<CardContent className="flex flex-col flex-grow px-4 py-0">
 								<div className="flex gap-2 py-2">
 									{blog.tags.map((tag, index) => (
 										<Badge
@@ -207,10 +208,12 @@ export default function JobSection2() {
 									</h1>
 								</div>
 								<div className="flex w-full">
-									<p>{blog.content.slice(0, 100)}...</p>
+									<p className="text-muted-foreground text-sm">
+										{blog.content.slice(0, 100)}...
+									</p>
 								</div>
 							</CardContent>
-							<CardFooter className="flex justify-between w-full px-6 py-4">
+							<CardFooter className="flex justify-between w-full px-4 py-4">
 								<div className="flex items-center gap-2">
 									<Avatar className="rounded-full">
 										<AvatarImage
