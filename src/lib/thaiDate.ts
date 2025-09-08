@@ -14,7 +14,7 @@ export const formatThaiDate = (date:any) => {
 }
 
 // สร้างฟังก์ชันสำหรับรับปีพุทธศักราช
-export const getThaiBuddhistYear = (date) => {
-	if (!date) return null
-	return dayjs(date).buddhistYear()
-}
+// export const getThaiBuddhistYear = (date) => {
+// 	if (!date) return null
+// 	return dayjs(date).buddhistYear()
+// }
