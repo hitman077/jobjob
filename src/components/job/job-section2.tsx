@@ -169,21 +169,23 @@ export default function JobSection2() {
 							key={index}
 							className="group overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-md py-0 gap-2"
 						>
-							<div className="inset-0 transition-transform duration-500 group-hover:scale-105">
-								<Image
-									src={blog.coverImage}
-									alt=""
-									width={300}
-									height={220}
-									className="w-full h-[200px] object-cover rounded-t-lg"
-								/>
-							</div>
+							<Link href={`/blog/${blog.id}`}>
+								<div className="inset-0 transition-transform duration-500 group-hover:scale-105">
+									<Image
+										src={blog.coverImage}
+										alt=""
+										width={300}
+										height={220}
+										className="w-full h-[200px] object-cover rounded-t-lg"
+									/>
+								</div>
+							</Link>
 							<CardContent className="flex flex-col flex-grow px-4 py-0">
 								<div className="flex gap-2 py-2">
 									{blog.tags.map((tag, index) => (
 										<Badge
-											className="bg-blue-300"
-											variant="secondary"
+											className="border-primary bg-primary-foreground"
+											variant="outline"
 											key={index}
 										>
 											{tag}
@@ -191,9 +193,11 @@ export default function JobSection2() {
 									))}
 								</div>
 								<div className="flex py-2">
-									<h1 className="font-medium text-xl">
-										{blog.title}
-									</h1>
+									<Link href={`/blog/${blog.id}`}>
+										<h1 className="font-medium text-xl group-hover:text-primary">
+											{blog.title}
+										</h1>
+									</Link>
 								</div>
 								<div className="flex w-full">
 									<p className="text-muted-foreground text-sm">
@@ -206,9 +210,13 @@ export default function JobSection2() {
 									<Avatar className="rounded-full">
 										<AvatarImage
 											src="https://github.com/shadcn.png"
-											alt="@shadcn"
+											alt={blog.author}
 										/>
-										<AvatarFallback>ER</AvatarFallback>
+										<AvatarFallback className="bg-primary text-primary-foreground">
+											{blog.author
+												.slice(0, 1)
+												.toUpperCase()}
+										</AvatarFallback>
 									</Avatar>
 
 									<h4 className="text-muted-foreground text-sm">
