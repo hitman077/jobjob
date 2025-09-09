@@ -7,7 +7,7 @@ import "swiper/css/autoplay"
 // import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/effect-fade"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
 import { Skeleton } from "./ui/skeleton"
 
 const banner = [
@@ -64,10 +64,12 @@ export default function BannerSection() {
 					{banner.length > 1 && (
 						<>
 							<div className="swiper-button-prev absolute top-1/2 left-2 z-10 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-center rounded-full bg-black/40 text-white cursor-pointer opacity-0 group-hover:opacity-100 duration-300 hover:bg-black/70">
-								<ChevronLeft className="size-7" />
+								{/* <ChevronLeft className="size-7" /> */}
+								<ArrowLeft className="size-7" />
 							</div>
 							<div className="swiper-button-next absolute top-1/2 right-2 z-10 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-center rounded-full bg-black/40 text-white cursor-pointer opacity-0 group-hover:opacity-100 duration-300 hover:bg-black/70">
-								<ChevronRight className="size-7" />
+								{/* <ChevronRight className="size-7" /> */}
+								<ArrowRight className="size-7" />
 							</div>
 						</>
 					)}
