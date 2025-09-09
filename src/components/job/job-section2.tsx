@@ -165,31 +165,19 @@ export default function JobSection2() {
 
 				<div className="mt-4 grid gap-4 md:mt-4 md:grid-cols-3">
 					{blogs.map((blog, index) => (
-						// <Card className="flex flex-col" key={index}>
-						// 	<CardHeader className="p-0">
-						// 		<Image
-						// 			src="https://i.imgur.com/62gGzeF.jpeg"
-						// 			alt=""
-						// 			width={300}
-						// 			height={150}
-						// 			className="w-full h-[150px] object-cover rounded-t-lg"
-						// 		/>
-						// 	</CardHeader>
-						// 	<CardContent className="p-2">
-						// 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						// 	</CardContent>
-						// </Card>
 						<Card
 							key={index}
-							className="flex flex-col h-full pt-0 pb-0 gap-2"
+							className="group overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-md py-0"
 						>
-							<Image
-								src={blog.coverImage}
-								alt=""
-								width={300}
-								height={256}
-								className="w-full h-[256px] object-cover rounded-t-lg"
-							/>
+							<div className="inset-0 size-full transition-transform duration-500 group-hover:scale-105">
+								<Image
+									src={blog.coverImage}
+									alt=""
+									width={300}
+									height={224}
+									className="w-full h-[200px] object-cover rounded-t-lg"
+								/>
+							</div>
 							<CardContent className="flex flex-col flex-grow px-4 py-0">
 								<div className="flex gap-2 py-2">
 									{blog.tags.map((tag, index) => (
