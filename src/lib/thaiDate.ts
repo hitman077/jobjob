@@ -9,7 +9,7 @@ dayjs.locale(th)
 // สร้างฟังก์ชันสำหรับแปลงวันที่เป็นภาษาไทย
 export const formatThaiDate = (date:any) => {
 	if (!date) return ""
-	return dayjs(date).format("D MMMM BBBB")
+	return dayjs(date).format("D MMM BBBB")
 	// return dayjs(date).format("วันddddที่ DD MMMM BBBB เวลา H:mm น.")
 }
 
