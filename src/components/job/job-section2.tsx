@@ -169,12 +169,12 @@ export default function JobSection2() {
 							key={index}
 							className="group overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-md py-0"
 						>
-							<div className="inset-0 size-full transition-transform duration-500 group-hover:scale-105">
+							<div className="inset-0 transition-transform duration-500 group-hover:scale-105">
 								<Image
 									src={blog.coverImage}
 									alt=""
 									width={300}
-									height={224}
+									height={220}
 									className="w-full h-[200px] object-cover rounded-t-lg"
 								/>
 							</div>
