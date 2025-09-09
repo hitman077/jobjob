@@ -158,8 +158,8 @@ export default function JobSection2() {
 		<section className="py-10">
 			<div className="mx-auto max-w-6xl px-6">
 				<div className="mx-auto max-w-6xl space-y-6">
-					<h1 className="text-xl font-semibold lg:text-2xl">
-						HOT JOBS
+					<h1 className="text-xl uppercase font-semibold lg:text-2xl">
+						Section2
 					</h1>
 				</div>
 
@@ -167,7 +167,7 @@ export default function JobSection2() {
 					{blogs.map((blog, index) => (
 						<Card
 							key={index}
-							className="group overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-md py-0"
+							className="group overflow-hidden transition-all duration-300 hover:border-primary hover:shadow-md py-0 gap-2"
 						>
 							<div className="inset-0 transition-transform duration-500 group-hover:scale-105">
 								<Image
