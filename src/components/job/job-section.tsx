@@ -120,8 +120,8 @@ export default function JobSection() {
 		<section className="py-10">
 			<div className="mx-auto max-w-6xl px-6">
 				<div className="mx-auto max-w-6xl space-y-6">
-					<h1 className="text-xl font-semibold lg:text-2xl">
-						TOP COMPANIES
+					<h1 className="text-xl uppercase font-semibold lg:text-2xl">
+						Section1
 					</h1>
 				</div>
 				<div className="mt-4">
@@ -153,22 +153,26 @@ export default function JobSection() {
 						className="my-swiper"
 					>
 						{companies.map((companie, index) => (
-							<SwiperSlide>
-								<Card
-									className="flex flex-col h-[300px] gap-2"
-									key={index}
-								>
-									<CardHeader className="p-0">
-										{/* <CardTitle className="font-medium">
+							<SwiperSlide className="pt-2">
+								<div className="transition-all duration-300 opacity-100 translate-y-0">
+									<Card
+										className="flex flex-col h-[300px] transition-transform duration-300 hover:border-primary hover:-translate-y-1 hover:text-primary"
+										key={index}
+									>
+										<CardHeader className="p-0">
+											{/* <CardTitle className="font-medium">
 											{companie.name}
 										</CardTitle> */}
-										<Skeleton className="flex h-[200px] w-full text-8xl items-center justify-center rounded-none" />
-									</CardHeader>
+											<Skeleton className="flex h-[200px] w-full text-8xl items-center justify-center rounded-none" />
+										</CardHeader>
 
-									<CardContent className="space-y-4 px-3">
-										<h1 className="font-light text-sm md:text-md">{companie.name.slice(0,24)}...</h1>
-									</CardContent>
-								</Card>
+										<CardContent className="space-y-4 px-3">
+											<h1 className="font-light text-sm md:text-md">
+												{companie.name.slice(0, 24)}...
+											</h1>
+										</CardContent>
+									</Card>
+								</div>
 							</SwiperSlide>
 						))}
 					</Swiper>
