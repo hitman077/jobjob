@@ -41,7 +41,7 @@ const tabs = [
 export default function JobSection3() {
 	return (
 		<section className="py-12 md:py-20">
-			<div className="mx-auto max-w-7xl space-y-4">
+			<div className="mx-auto max-w-7xl space-y-6">
 				<div className="relative z-10 mx-auto max-w-7xl">
 					<h1 className="text-xl uppercase font-semibold lg:text-2xl">
 						Section3
