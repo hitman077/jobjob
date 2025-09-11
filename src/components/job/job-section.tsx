@@ -118,8 +118,8 @@ const companies: Company[] = [
 export default function JobSection() {
 	return (
 		<section className="py-10">
-			<div className="mx-auto max-w-6xl px-6">
-				<div className="mx-auto max-w-6xl space-y-6">
+			<div className="mx-auto max-w-7xl">
+				<div className="mx-auto max-w-7xl space-y-6">
 					<h1 className="text-xl uppercase font-semibold lg:text-2xl">
 						Section1
 					</h1>
