@@ -156,14 +156,14 @@ export default function JobSection() {
 							<SwiperSlide className="pt-2">
 								<div className="transition-all duration-300 opacity-100 translate-y-0">
 									<Card
-										className="flex flex-col h-[300px] transition-transform duration-300 hover:border-primary hover:-translate-y-1 hover:text-primary"
+										className="flex flex-col h-[380px] transition-transform duration-300 hover:border-primary hover:-translate-y-1 hover:text-primary"
 										key={index}
 									>
 										<CardHeader className="p-0">
 											{/* <CardTitle className="font-medium">
 											{companie.name}
 										</CardTitle> */}
-											<Skeleton className="flex h-[200px] w-full text-8xl items-center justify-center rounded-none" />
+											<Skeleton className="flex h-[250px] w-full text-8xl items-center justify-center rounded-none" />
 										</CardHeader>
 
 										<CardContent className="space-y-4 px-3">
